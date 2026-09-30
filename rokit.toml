@@ -1,0 +1,12 @@
+# Toolchain managed by Rokit — https://github.com/rojo-rbx/rokit
+# Install every pinned tool with:  rokit install
+# pesde is intentionally NOT listed here: it manages its own versions
+# (`pesde self-install` / `pesde self-upgrade`).
+
+[tools]
+rojo = "rojo-rbx/rojo@7.7.0"
+selene = "Kampfkarren/selene@0.31.0"
+stylua = "JohnnyMorganz/StyLua@2.5.2"
+lune = "lune-org/lune@0.10.5"
+luau-lsp = "JohnnyMorganz/luau-lsp@1.70.1"
+wally-package-types = "JohnnyMorganz/wally-package-types@1.7.0"

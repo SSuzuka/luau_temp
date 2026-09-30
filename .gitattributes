@@ -1,0 +1,10 @@
+# Normalize all text files to LF in the repository and in the working tree.
+# Keeps StyLua (line_endings = "Unix") and cross-platform checkouts consistent.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.rbxm binary
+*.rbxmx text eol=lf
+*.rbxl binary
+*.rbxlx text eol=lf

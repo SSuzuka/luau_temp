@@ -1,0 +1,39 @@
+{
+  "name": "luau_temp",
+  "emitLegacyScripts": false,
+  "tree": {
+    "$className": "DataModel",
+
+    "ServerScriptService": {
+      "$path": "src/server",
+      "tests": {
+        "$path": "src/tests"
+      }
+    },
+
+    "ReplicatedStorage": {
+      "shared": {
+        "$path": "src/shared"
+      },
+      "net": {
+        "$path": "src/net"
+      },
+      "packages": {
+        "$path": {
+          "optional": "roblox_packages"
+        }
+      },
+      "server_packages": {
+        "$path": {
+          "optional": "roblox_server_packages"
+        }
+      }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$path": "src/client"
+      }
+    }
+  }
+}

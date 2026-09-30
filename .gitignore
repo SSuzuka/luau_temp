@@ -1,0 +1,26 @@
+# --- pesde ---
+roblox_packages/
+roblox_server_packages/
+
+# --- generated / tooling ---
+sourcemap.json
+**/sourcemap.json
+globalTypes.d.luau
+luau-lsp/
+
+# --- Rojo build output ---
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+build/
+dist/
+
+# --- editor / OS ---
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json

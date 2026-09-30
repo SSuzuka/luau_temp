@@ -1,0 +1,37 @@
+name = "ssuzuka/luau_temp"
+version = "0.1.0"
+description = "Luau game template: RbxUtil + React Lua + Charm + ProfileStore + Jest Lua"
+license = "MIT"
+authors = ["SSuzuka"]
+
+[target]
+environment = "roblox"
+
+# Scripts pesde runs after install to keep the Rojo project file and the
+# luau-lsp sourcemap (used for Wally package types) up to date.
+[scripts]
+roblox_sync_config_generator = ".pesde/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/sourcemap_generator.luau"
+
+# Wally registry, used for every dependency below (via the `wally#` prefix).
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+# --- Framework / utilities (RbxUtil) ---
+Loader = { wally = "wally#sleitnick/loader", version = "^2.0.0" }
+Net = { wally = "wally#sleitnick/net", version = "^0.2.0" }
+Signal = { wally = "wally#sleitnick/signal", version = "^2.0.3" }
+Janitor = { wally = "wally#howmanysmall/janitor", version = "^1.18.3" }
+Sift = { wally = "wally#csqrl/sift", version = "^0.0.11" }
+
+# --- UI + state (React Lua + Charm) ---
+React = { wally = "wally#jsdotlua/react", version = "^17.2.1" }
+ReactRoblox = { wally = "wally#jsdotlua/react-roblox", version = "^17.2.1" }
+Charm = { wally = "wally#littensy/charm", version = "^0.10.0" }
+ReactCharm = { wally = "wally#littensy/react-charm", version = "^0.3.0" }
+
+[dev_dependencies]
+# --- Testing (Jest Lua) ---
+Jest = { wally = "wally#jsdotlua/jest", version = "^3.10.0" }
+JestGlobals = { wally = "wally#jsdotlua/jest-globals", version = "^3.10.0" }

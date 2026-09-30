@@ -1,0 +1,12 @@
+# Custom Selene standard library.
+#
+# Extends the built-in `roblox` std and widens `require` so it accepts the
+# require-by-string form (e.g. require("@game/ReplicatedStorage/shared/util")),
+# which Selene's stock Roblox definitions still type as `number` only.
+
+base: roblox
+
+globals:
+  require:
+    args:
+      - type: any

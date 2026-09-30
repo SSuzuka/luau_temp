@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "pesde install",
+      "type": "shell",
+      "command": "pesde install",
+      "problemMatcher": []
+    },
+    {
+      "label": "rojo serve",
+      "type": "shell",
+      "command": "rojo serve default.project.json",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "rojo build",
+      "type": "shell",
+      "command": "rojo build default.project.json -o build/game.rbxlx",
+      "problemMatcher": []
+    },
+    {
+      "label": "stylua format",
+      "type": "shell",
+      "command": "stylua src .pesde",
+      "problemMatcher": []
+    },
+    {
+      "label": "selene lint",
+      "type": "shell",
+      "command": "selene src",
+      "problemMatcher": []
+    },
+    {
+      "label": "luau-lsp analyze",
+      "type": "shell",
+      "command": "rojo sourcemap default.project.json --output sourcemap.json; luau-lsp analyze --sourcemap=sourcemap.json --definitions=@roblox=globalTypes.d.luau --platform=roblox --ignore=\"roblox_packages/**\" --ignore=\".pesde/**\" --ignore=\"src/server/vendor/**\" src",
+      "problemMatcher": []
+    }
+  ]
+}

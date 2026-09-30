@@ -1,0 +1,9 @@
+std = "selene_definitions"
+
+exclude = [
+    "roblox_packages/**",
+    "roblox_server_packages/**",
+    "src/server/vendor/**",
+    ".pesde/**",
+    "**/*.d.luau",
+]

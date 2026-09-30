@@ -1,0 +1,18 @@
+{
+  "luau-lsp.platform.type": "roblox",
+  "luau-lsp.sourcemap.enabled": true,
+  "luau-lsp.sourcemap.autogenerate": true,
+  "luau-lsp.sourcemap.rojoProjectFile": "default.project.json",
+  "luau-lsp.sourcemap.includeNonScripts": true,
+  "luau-lsp.completion.imports.enabled": true,
+  "luau-lsp.fflags.enableNewSolver": true,
+  "editor.formatOnSave": true,
+  "editor.rulers": [120],
+  "files.eol": "\n",
+  "[luau]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}
