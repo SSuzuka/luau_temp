@@ -11,12 +11,12 @@ local function App()
     local coins = ReactCharm.useAtom(AppState.coins)
     local serverTime = ReactCharm.useAtom(AppState.serverTime)
 
-    return e("ScreenGui", {
+    return e("Frame", {
         Name = "App",
-        ResetOnSpawn = false,
-        IgnoreGuiInset = true,
+        Size = UDim2.fromScale(1, 1),
+        BackgroundTransparency = 1,
     }, {
-        Frame = e("Frame", {
+        Card = e("Frame", {
             AnchorPoint = Vector2.new(0.5, 0),
             Position = UDim2.fromScale(0.5, 0.05),
             Size = UDim2.fromOffset(240, 72),
