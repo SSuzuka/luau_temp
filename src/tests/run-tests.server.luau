@@ -15,6 +15,14 @@ if not RunService:IsStudio() then
     return
 end
 
+-- Studio's Output window does not render ANSI escapes, so Jest's colored
+-- reporter would show literal `[0m[7m[1m[32m` garbage. Chalk (used by the
+-- reporter) disables styling when `_G.NOCOLOR` is set; it must be set before
+-- the Jest package is required. This is the only supported switch — Jest has no
+-- `colors` runCLI option — so `_G` is used deliberately here.
+-- selene: allow(global_usage)
+(_G :: any).NOCOLOR = true
+
 local Jest = require("@game/ReplicatedStorage/packages/Jest")
 
 local tests = ServerScriptService:WaitForChild("tests")
