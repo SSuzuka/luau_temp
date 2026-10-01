@@ -1,12 +1,14 @@
 --!strict
 
-local JestGlobals = require("@game/ReplicatedStorage/packages/JestGlobals")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local JestGlobals = require(ReplicatedStorage.packages.JestGlobals)
 
 local describe = JestGlobals.describe
 local it = JestGlobals.it
 local expect = JestGlobals.expect
 
-local Util = require("@game/ReplicatedStorage/shared/util")
+local Util = require(ReplicatedStorage.shared.util)
 
 describe("Util.clamp", function()
     it("clamps values into the given range", function()
